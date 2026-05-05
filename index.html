@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>SASSP 2026 — Editable Poster</title>
+<title>SASSP 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
@@ -36,19 +36,6 @@
     position:relative;
     box-shadow:0 30px 80px rgba(0,0,0,.35);
     overflow:hidden;
-  }
-
-  /* ───────── editable affordance ───────── */
-  [contenteditable="true"]{outline:none;}
-  [contenteditable="true"]:hover{
-    background:rgba(178,103,68,0.08);
-    box-shadow:0 0 0 2px rgba(178,103,68,0.18);
-    border-radius:2px;
-  }
-  [contenteditable="true"]:focus{
-    background:rgba(178,103,68,0.12);
-    box-shadow:0 0 0 2px var(--accent);
-    border-radius:2px;
   }
 
   /* ───────── header ───────── */
@@ -434,45 +421,6 @@
   .corner.tl{top:18px;left:24px;color:rgba(247,244,236,.6);}
   .corner.tr{top:18px;right:24px;color:rgba(247,244,236,.6);}
 
-  /* edit hint */
-  .edit-hint{
-    position:fixed;bottom:18px;right:18px;
-    background:var(--ink);color:var(--paper);
-    font-family:var(--mono);font-size:11px;letter-spacing:.1em;
-    padding:10px 14px;border-radius:4px;
-    box-shadow:0 8px 30px rgba(0,0,0,.4);
-    z-index:50;
-  }
-  .edit-hint b{color:var(--accent);}
-
-  /* palette switcher */
-  .palette-switch{
-    position:fixed; top:18px; right:18px; z-index:50;
-    background:rgba(20,20,20,.92);
-    backdrop-filter:blur(8px);
-    border-radius:8px;
-    padding:10px 12px;
-    box-shadow:0 8px 30px rgba(0,0,0,.4);
-    display:flex;align-items:center;gap:10px;
-  }
-  .palette-switch .lbl{
-    font-family:var(--mono);font-size:10px;letter-spacing:.18em;
-    color:rgba(255,255,255,.6);text-transform:uppercase;
-  }
-  .palette-switch .chips{display:flex;gap:6px;}
-  .palette-switch button{
-    width:24px;height:24px;border-radius:50%;
-    border:2px solid rgba(255,255,255,.15);
-    cursor:pointer;padding:0;
-    transition:transform .15s ease, border-color .15s ease;
-  }
-  .palette-switch button:hover{transform:scale(1.1);}
-  .palette-switch button[aria-pressed="true"]{
-    border-color:#fff;
-    box-shadow:0 0 0 2px rgba(255,255,255,.2);
-  }
-  @media print{ .palette-switch{display:none;} }
-
   /* ───────── light-theme overrides for header ───────── */
   body.light-theme .header,
   body.light-theme h1.title,
@@ -499,7 +447,6 @@
   body.light-theme .spectrogram{ opacity:.55; }
   body.light-theme .colophon{ background:#2A2D34; }
   @media print{
-    .edit-hint{display:none;}
     body{background:#fff;padding:0;}
     .poster{box-shadow:none;}
   }
@@ -560,32 +507,32 @@
       </g>
     </svg>
 
-    <span class="corner tl" contenteditable="true">SASSP / VOL. XIV / 2026</span>
-    <span class="corner tr" contenteditable="true">UTAR · SUNGAI LONG · MY</span>
+    <span class="corner tl">SASSP / VOL. XIV / 2026</span>
+    <span class="corner tr">UTAR · SUNGAI LONG · MY</span>
 
     <div class="meta-row">
-      <span contenteditable="true">IEEE Signal Processing Society — Malaysia Chapter</span>
-      <span contenteditable="true">In physical mode · Open registration</span>
+      <span>IEEE Signal Processing Society — Malaysia Chapter</span>
+      <span>In physical mode · Open registration</span>
     </div>
 
-    <div class="edition" contenteditable="true">Fourteenth Edition · Symposium Programme</div>
+    <div class="edition">Fourteenth Edition · Symposium Programme</div>
 
-    <h1 class="title" contenteditable="true">Acoustics, Speech<br>&amp; <em>Signal Processing</em></h1>
+    <h1 class="title">Acoustics, Speech<br>&amp; <em>Signal Processing</em></h1>
 
-    <div class="subtitle" contenteditable="true">A one-day symposium convening academics, students and industry practitioners to share advances in signal processing — hosted at Universiti Tunku Abdul Rahman.</div>
+    <div class="subtitle">A one-day symposium convening academics, students and industry practitioners to share advances in signal processing — hosted at Universiti Tunku Abdul Rahman.</div>
 
     <div class="header-grid">
       <div class="h-cell">
         <div class="label">Date</div>
-        <div class="date-big" contenteditable="true">10 August <span class="yr">2026</span></div>
+        <div class="date-big">10 August <span class="yr">2026</span></div>
       </div>
       <div class="h-cell">
         <div class="label">Host Institution</div>
-        <div class="val" contenteditable="true">Universiti Tunku Abdul Rahman <span class="small">Sungai Long Campus, Malaysia</span></div>
+        <div class="val">Universiti Tunku Abdul Rahman <span class="small">Sungai Long Campus, Malaysia</span></div>
       </div>
       <div class="h-cell">
         <div class="label">Venue</div>
-        <div class="val" contenteditable="true">KB104 <span class="small">Lecture Theatre · Block KB</span></div>
+        <div class="val">KB104 <span class="small">Lecture Theatre · Block KB</span></div>
       </div>
     </div>
   </header>
@@ -602,13 +549,13 @@
           <h2>Overview</h2>
           <span class="rule-end"></span>
         </div>
-        <p class="lede" contenteditable="true">The IEEE Signal Processing Society Malaysia Chapter and Universiti Tunku Abdul Rahman jointly organise the 14ᵗʰ Symposium on Acoustics, Speech and Signal Processing on 10 August 2026 — a free, in-person gathering open to students, academics, industry professionals and IEEE / non-IEEE members alike.</p>
+        <p class="lede">The IEEE Signal Processing Society Malaysia Chapter and Universiti Tunku Abdul Rahman jointly organise the 14ᵗʰ Symposium on Acoustics, Speech and Signal Processing on 10 August 2026 — a free, in-person gathering open to students, academics, industry professionals and IEEE / non-IEEE members alike.</p>
 
         <div class="objectives">
           <div class="label">Objectives</div>
           <ul>
-            <li contenteditable="true">Bring the university and industry together to share and discuss the latest trends in signal processing.</li>
-            <li contenteditable="true">Serve as a forum for knowledge sharing on signal processing technology and for professional networking.</li>
+            <li>Bring the university and industry together to share and discuss the latest trends in signal processing.</li>
+            <li>Serve as a forum for knowledge sharing on signal processing technology and for professional networking.</li>
           </ul>
         </div>
       </section>
@@ -624,16 +571,16 @@
           <span class="rule-end"></span>
         </div>
         <ul class="topics">
-          <li><span class="n">01</span><span class="t" contenteditable="true">Audio &amp; Acoustics</span></li>
-          <li><span class="n">02</span><span class="t" contenteditable="true">Speech &amp; Language Processing</span></li>
-          <li><span class="n">03</span><span class="t" contenteditable="true">Digital Signal Processing</span></li>
-          <li><span class="n">04</span><span class="t" contenteditable="true">Biomedical Signal Processing</span></li>
-          <li><span class="n">05</span><span class="t" contenteditable="true">Machine Learning for Signal Analysis</span></li>
-          <li><span class="n">06</span><span class="t" contenteditable="true">Communication Systems</span></li>
-          <li><span class="n">07</span><span class="t" contenteditable="true">Multimedia Signal Processing</span></li>
-          <li><span class="n">08</span><span class="t" contenteditable="true">Signal Processing Theory &amp; Methods</span></li>
-          <li><span class="n">09</span><span class="t" contenteditable="true">AI for Speech &amp; Audio</span></li>
-          <li><span class="n">10</span><span class="t" contenteditable="true">Emerging SP Applications</span></li>
+          <li><span class="n">01</span><span class="t">Audio &amp; Acoustics</span></li>
+          <li><span class="n">02</span><span class="t">Speech &amp; Language Processing</span></li>
+          <li><span class="n">03</span><span class="t">Digital Signal Processing</span></li>
+          <li><span class="n">04</span><span class="t">Biomedical Signal Processing</span></li>
+          <li><span class="n">05</span><span class="t">Machine Learning for Signal Analysis</span></li>
+          <li><span class="n">06</span><span class="t">Communication Systems</span></li>
+          <li><span class="n">07</span><span class="t">Multimedia Signal Processing</span></li>
+          <li><span class="n">08</span><span class="t">Signal Processing Theory &amp; Methods</span></li>
+          <li><span class="n">09</span><span class="t">AI for Speech &amp; Audio</span></li>
+          <li><span class="n">10</span><span class="t">Emerging SP Applications</span></li>
         </ul>
       </section>
     </div>
@@ -650,22 +597,22 @@
           <tr><th>Time</th><th>Programme</th></tr>
         </thead>
         <tbody>
-          <tr><td class="t" contenteditable="true">08:30 — 09:00</td><td class="p" contenteditable="true">Registration</td></tr>
-          <tr><td class="t" contenteditable="true">09:00 — 09:05</td><td class="p" contenteditable="true">National Anthem</td></tr>
-          <tr><td class="t" contenteditable="true">09:05 — 09:15</td><td class="p" contenteditable="true">Welcome Speech by Advisor &amp; Dean of LKC FES</td></tr>
-          <tr><td class="t" contenteditable="true">09:15 — 09:25</td><td class="p" contenteditable="true">Welcome Speech by IPSR Director</td></tr>
-          <tr><td class="t" contenteditable="true">09:25 — 09:35</td><td class="p" contenteditable="true">Opening Speech by Chair of IEEE SPS</td></tr>
-          <tr><td class="t" contenteditable="true">09:35 — 10:35</td><td class="p" contenteditable="true">Technical Presentation Session I</td></tr>
-          <tr class="brk"><td class="t" contenteditable="true">10:35 — 10:55</td><td class="p" contenteditable="true">Group Photograph &amp; Tea Break</td></tr>
-          <tr class="kn"><td class="t" contenteditable="true">10:55 — 11:25</td><td class="p" contenteditable="true">Keynote Session I</td></tr>
-          <tr class="kn"><td class="t" contenteditable="true">11:25 — 11:55</td><td class="p" contenteditable="true">Keynote Session II</td></tr>
-          <tr class="kn"><td class="t" contenteditable="true">11:55 — 12:25</td><td class="p" contenteditable="true">Keynote Session III (Online)</td></tr>
-          <tr><td class="t" contenteditable="true">12:25 — 12:30</td><td class="p" contenteditable="true">IEEE &amp; SPS Membership Drive</td></tr>
-          <tr class="brk"><td class="t" contenteditable="true">12:30 — 14:00</td><td class="p" contenteditable="true">Networking Lunch</td></tr>
-          <tr><td class="t" contenteditable="true">14:00 — 15:00</td><td class="p" contenteditable="true">Technical Presentation Session II</td></tr>
-          <tr class="brk"><td class="t" contenteditable="true">15:00 — 15:15</td><td class="p" contenteditable="true">Tea Break</td></tr>
-          <tr><td class="t" contenteditable="true">15:15 — 16:15</td><td class="p" contenteditable="true">Technical Presentation Session III</td></tr>
-          <tr><td class="t" contenteditable="true">16:15 — 16:30</td><td class="p" contenteditable="true">Closing Remarks &amp; End of Symposium</td></tr>
+          <tr><td class="t">08:30 — 09:00</td><td class="p">Registration</td></tr>
+          <tr><td class="t">09:00 — 09:05</td><td class="p">National Anthem</td></tr>
+          <tr><td class="t">09:05 — 09:15</td><td class="p">Welcome Speech by Advisor &amp; Dean of LKC FES</td></tr>
+          <tr><td class="t">09:15 — 09:25</td><td class="p">Welcome Speech by IPSR Director</td></tr>
+          <tr><td class="t">09:25 — 09:35</td><td class="p">Opening Speech by Chair of IEEE SPS</td></tr>
+          <tr><td class="t">09:35 — 10:35</td><td class="p">Technical Presentation Session I</td></tr>
+          <tr class="brk"><td class="t">10:35 — 10:55</td><td class="p">Group Photograph &amp; Tea Break</td></tr>
+          <tr class="kn"><td class="t">10:55 — 11:25</td><td class="p">Keynote Session I</td></tr>
+          <tr class="kn"><td class="t">11:25 — 11:55</td><td class="p">Keynote Session II</td></tr>
+          <tr class="kn"><td class="t">11:55 — 12:25</td><td class="p">Keynote Session III (Online)</td></tr>
+          <tr><td class="t">12:25 — 12:30</td><td class="p">IEEE &amp; SPS Membership Drive</td></tr>
+          <tr class="brk"><td class="t">12:30 — 14:00</td><td class="p">Networking Lunch</td></tr>
+          <tr><td class="t">14:00 — 15:00</td><td class="p">Technical Presentation Session II</td></tr>
+          <tr class="brk"><td class="t">15:00 — 15:15</td><td class="p">Tea Break</td></tr>
+          <tr><td class="t">15:15 — 16:15</td><td class="p">Technical Presentation Session III</td></tr>
+          <tr><td class="t">16:15 — 16:30</td><td class="p">Closing Remarks &amp; End of Symposium</td></tr>
         </tbody>
       </table>
     </section>
@@ -679,16 +626,16 @@
           <span class="rule-end"></span>
         </div>
         <dl>
-          <div><dt>Advisor</dt><dd contenteditable="true">Prof. Ir. Dr. Chang Yoong Choon</dd></div>
-          <div><dt>Co-Advisor</dt><dd contenteditable="true">Prof. Dr. Humaira Nisar</dd></div>
-          <div><dt>General Chair</dt><dd contenteditable="true">Ir. Dr. Hum Yan Chai</dd></div>
-          <div><dt>Deputy General Chair</dt><dd contenteditable="true">Dr. Rohaniza Mohd Zali</dd></div>
-          <div><dt>Operations Chair</dt><dd contenteditable="true">Dr. Hau Lee Cheun</dd></div>
-          <div><dt>Technical Programme Chair</dt><dd contenteditable="true">Ir. Dr. Goh Choon Hian</dd></div>
-          <div><dt>Publicity &amp; Digital Comms.</dt><dd contenteditable="true">Ir. Dr. Ng Law Yong</dd></div>
-          <div><dt>Secretariat Chair</dt><dd contenteditable="true">Ms. Tan Yin Qing</dd></div>
-          <div><dt>Local Arrangement Chair</dt><dd contenteditable="true">Dr. Tan Lee Fan</dd></div>
-          <div><dt>Organising Committee Chair</dt><dd contenteditable="true">Ir. Ts. Dr. Mohd Norzali Bin Hj Mohd</dd></div>
+          <div><dt>Advisor</dt><dd>Prof. Ir. Dr. Chang Yoong Choon</dd></div>
+          <div><dt>Co-Advisor</dt><dd>Prof. Dr. Humaira Nisar</dd></div>
+          <div><dt>General Chair</dt><dd>Ir. Dr. Hum Yan Chai</dd></div>
+          <div><dt>Deputy General Chair</dt><dd>Dr. Rohaniza Mohd Zali</dd></div>
+          <div><dt>Operations Chair</dt><dd>Dr. Hau Lee Cheun</dd></div>
+          <div><dt>Technical Programme Chair</dt><dd>Ir. Dr. Goh Choon Hian</dd></div>
+          <div><dt>Publicity &amp; Digital Comms.</dt><dd>Ir. Dr. Ng Law Yong</dd></div>
+          <div><dt>Secretariat Chair</dt><dd>Ms. Tan Yin Qing</dd></div>
+          <div><dt>Local Arrangement Chair</dt><dd>Dr. Tan Lee Fan</dd></div>
+          <div><dt>Organising Committee Chair</dt><dd>Ir. Ts. Dr. Mohd Norzali Bin Hj Mohd</dd></div>
         </dl>
       </div>
 
@@ -699,18 +646,18 @@
           <span class="rule-end"></span>
         </div>
         <ul class="adv-list" style="list-style:none;margin:0;padding:0;">
-          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;" contenteditable="true">Hadiwawil Mohamad Nasir <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UniKL)</span></li>
-          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;" contenteditable="true">Hezerul Abdul Karim <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UiTM)</span></li>
-          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;" contenteditable="true">Noriza Mohd Noor <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UiTM)</span></li>
-          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;" contenteditable="true">Syed Abdul Rahman Syed Abu Bakar <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UTM)</span></li>
-          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;" contenteditable="true">R. Logeswaran N. Rajasekaran <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(HELP)</span></li>
-          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;" contenteditable="true">Mohammad Faizal Ahmad Fauzi <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(MMU)</span></li>
-          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;" contenteditable="true">Siti Amiza Mohd Aris <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UTM)</span></li>
-          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;" contenteditable="true">Zaidi Omar <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UTM)</span></li>
-          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;" contenteditable="true">Syed Mohd Zaili Syed Zainal Ariffin <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UiTM)</span></li>
-          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;" contenteditable="true">Usman Ullah Sheikh <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UiTM)</span></li>
-          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;" contenteditable="true">Mohd Norizal Mohd <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UKM)</span></li>
-          <li style="padding:8px 0;font-family:var(--serif);font-size:17px;" contenteditable="true">Nurul Jaspar <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UM)</span></li>
+          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;">Hadiwawil Mohamad Nasir <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UniKL)</span></li>
+          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;">Hezerul Abdul Karim <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UiTM)</span></li>
+          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;">Noriza Mohd Noor <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UiTM)</span></li>
+          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;">Syed Abdul Rahman Syed Abu Bakar <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UTM)</span></li>
+          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;">R. Logeswaran N. Rajasekaran <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(HELP)</span></li>
+          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;">Mohammad Faizal Ahmad Fauzi <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(MMU)</span></li>
+          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;">Siti Amiza Mohd Aris <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UTM)</span></li>
+          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;">Zaidi Omar <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UTM)</span></li>
+          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;">Syed Mohd Zaili Syed Zainal Ariffin <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UiTM)</span></li>
+          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;">Usman Ullah Sheikh <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UiTM)</span></li>
+          <li style="padding:8px 0;border-bottom:1px dotted rgba(15,27,45,.2);font-family:var(--serif);font-size:17px;">Mohd Norizal Mohd <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UKM)</span></li>
+          <li style="padding:8px 0;font-family:var(--serif);font-size:17px;">Nurul Jaspar <span style="font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.04em;">(UM)</span></li>
         </ul>
       </div>
     </section>
@@ -724,9 +671,9 @@
           <span class="rule-end"></span>
         </div>
         <ol>
-          <li contenteditable="true">Dr. Zaleha May (UiTM)</li>
-          <li contenteditable="true">Dr. Prihya Adireyn (UTAR)</li>
-          <li contenteditable="true">Dr. Fadzli Adam (PSA)</li>
+          <li>Dr. Zaleha May (UiTM)</li>
+          <li>Dr. Prihya Adireyn (UTAR)</li>
+          <li>Dr. Fadzli Adam (PSA)</li>
         </ol>
       </div>
       <div>
@@ -736,8 +683,8 @@
           <span class="rule-end"></span>
         </div>
         <ol>
-          <li contenteditable="true">Dr. Rusznani Yahya (PSA)</li>
-          <li contenteditable="true">Nurul Anwar Kamsol (PSA)</li>
+          <li>Dr. Rusznani Yahya (PSA)</li>
+          <li>Nurul Anwar Kamsol (PSA)</li>
         </ol>
       </div>
     </section>
@@ -750,10 +697,10 @@
           <h2>Important Dates</h2>
           <span class="rule-end"></span>
         </div>
-        <div class="row"><span class="k" contenteditable="true">Abstract Submission Deadline</span><span class="v due" contenteditable="true">5 July 2026</span></div>
-        <div class="row"><span class="k" contenteditable="true">Notification of Acceptance</span><span class="v" contenteditable="true">10 — 15 July 2026</span></div>
-        <div class="row"><span class="k" contenteditable="true">Registration Period</span><span class="v" contenteditable="true">16 — 25 July 2026</span></div>
-        <div class="row"><span class="k" contenteditable="true">Event Date</span><span class="v due" contenteditable="true">10 August 2026</span></div>
+        <div class="row"><span class="k">Abstract Submission Deadline</span><span class="v due">5 July 2026</span></div>
+        <div class="row"><span class="k">Notification of Acceptance</span><span class="v">10 — 15 July 2026</span></div>
+        <div class="row"><span class="k">Registration Period</span><span class="v">16 — 25 July 2026</span></div>
+        <div class="row"><span class="k">Event Date</span><span class="v due">10 August 2026</span></div>
       </div>
 
       <div class="register">
@@ -762,8 +709,8 @@
         </div>
         <div class="reg-text">
           <div class="lab">Registration · Free of charge</div>
-          <h3 contenteditable="true">Scan to Register</h3>
-          <div class="url" contenteditable="true">forms.gle/sy65dKTwkJcXX5769</div>
+          <h3>Scan to Register</h3>
+          <div class="url">forms.gle/sy65dKTwkJcXX5769</div>
         </div>
       </div>
     </section>
@@ -784,90 +731,19 @@
 
 </div>
 
-<div class="palette-switch" role="group" aria-label="Theme">
-  <span class="lbl">Theme</span>
-  <div class="chips" id="paletteChips"></div>
-</div>
-
-<div class="edit-hint">click any text · <b>edit live</b></div>
-
 <script>
-  // populate spectrogram bars at top of header
+  // Decorative spectrogram bars at top of header
   const spectro = document.getElementById('spectro');
   if (spectro) {
     const N = 96;
     let html = '';
     for (let i = 0; i < N; i++) {
-      // decaying envelope toward edges + some pseudo-random heights
       const env = Math.sin((i / N) * Math.PI);
       const h = (8 + Math.abs(Math.sin(i * 1.7) + Math.cos(i * 0.6)) * 28) * (0.4 + env * 0.8);
       html += `<span style="height:${h.toFixed(1)}px"></span>`;
     }
     spectro.innerHTML = html;
   }
-
-  // Make hint dismissable
-  document.querySelector('.edit-hint').addEventListener('click', e => e.currentTarget.remove());
-
-  // ─── palette switcher ───
-  const PALETTES = {
-    'Ink':       { ink:'#181040', ink2:'#241964', paper:'#F7F4EC', paper2:'#EFEAD8', accent:'oklch(0.65 0.15 50)',  accentSoft:'oklch(0.92 0.05 60)',  glow1:'rgba(220,150,90,.18)', glow2:'rgba(120,140,220,.14)' },
-    'Forest':    { ink:'#143028', ink2:'#1E4538', paper:'#F4F1E6', paper2:'#E8E3D0', accent:'oklch(0.68 0.14 70)',  accentSoft:'oklch(0.92 0.05 80)',  glow1:'rgba(212,160,90,.20)', glow2:'rgba(150,200,160,.10)' },
-    'Plum':      { ink:'#2A1530', ink2:'#3D2046', paper:'#F6F1EE', paper2:'#ECE2DD', accent:'oklch(0.72 0.13 35)',  accentSoft:'oklch(0.92 0.04 40)',  glow1:'rgba(220,140,110,.20)', glow2:'rgba(180,120,200,.12)' },
-    'Crimson':   { ink:'#3B1115', ink2:'#52181E', paper:'#F7EFE9', paper2:'#EDDFD4', accent:'oklch(0.78 0.12 70)',  accentSoft:'oklch(0.93 0.05 80)',  glow1:'rgba(230,180,120,.22)', glow2:'rgba(200,100,90,.10)' },
-    'Slate':     { ink:'#22272E', ink2:'#2E343C', paper:'#F2F0EC', paper2:'#E5E2DB', accent:'oklch(0.70 0.13 220)', accentSoft:'oklch(0.92 0.04 230)', glow1:'rgba(110,170,220,.20)', glow2:'rgba(180,140,220,.10)' },
-    'Sand':      { ink:'#3A2E1F', ink2:'#4E3F2C', paper:'#F8F2E4', paper2:'#EDE3CB', accent:'oklch(0.65 0.13 30)',  accentSoft:'oklch(0.92 0.05 50)',  glow1:'rgba(200,140,100,.22)', glow2:'rgba(220,180,120,.12)' },
-    'Slate-Lt':  { ink:'#2A2D34', ink2:'#3A3F4A', paper:'#FBFAF5', paper2:'#EFECE2', accent:'oklch(0.55 0.14 30)',  accentSoft:'oklch(0.70 0.10 40)',  glow1:'rgba(180,110,80,.10)', glow2:'rgba(140,160,180,.10)', headerBg1:'#EFEAD8', headerBg2:'#E5DECB', headerInk:'#2A2D34', light:true },
-  };
-  const CHIP_COLOR = {
-    'Ink':'#181040','Forest':'#143028','Plum':'#2A1530','Crimson':'#3B1115',
-    'Slate':'#22272E','Sand':'#3A2E1F','Slate-Lt':'#EFEAD8'
-  };
-
-  function applyPalette(name) {
-    const p = PALETTES[name]; if (!p) return;
-    const r = document.documentElement.style;
-    r.setProperty('--ink', p.ink);
-    r.setProperty('--ink-2', p.ink2);
-    r.setProperty('--paper', p.paper);
-    r.setProperty('--paper-2', p.paper2);
-    r.setProperty('--accent', p.accent);
-    r.setProperty('--accent-soft', p.accentSoft);
-    // header gradient
-    const hdr = document.querySelector('.header');
-    if (hdr) {
-      const bg1 = p.headerBg1 || p.ink;
-      const bg2 = p.headerBg2 || p.ink2;
-      hdr.style.background =
-        `radial-gradient(ellipse at 85% 20%, ${p.glow1} 0%, transparent 55%),` +
-        `radial-gradient(ellipse at 10% 90%, ${p.glow2} 0%, transparent 50%),` +
-        `linear-gradient(180deg, ${bg1} 0%, ${bg2} 100%)`;
-    }
-    // light theme: header text needs readjusting
-    document.body.classList.toggle('light-theme', !!p.light);
-    // pressed state
-    document.querySelectorAll('#paletteChips button').forEach(b => {
-      b.setAttribute('aria-pressed', b.dataset.name === name ? 'true' : 'false');
-    });
-    try { localStorage.setItem('sassp-palette', name); } catch(e){}
-  }
-
-  const chipsEl = document.getElementById('paletteChips');
-  Object.keys(PALETTES).forEach(name => {
-    const b = document.createElement('button');
-    b.dataset.name = name;
-    b.title = name;
-    b.style.background = CHIP_COLOR[name];
-    b.setAttribute('aria-pressed', name === 'Ink' ? 'true' : 'false');
-    b.addEventListener('click', () => applyPalette(name));
-    chipsEl.appendChild(b);
-  });
-
-  // restore last choice (defaults to 'Ink' / UTAR navy)
-  try {
-    const saved = localStorage.getItem('sassp-palette') || 'Ink';
-    if (PALETTES[saved]) applyPalette(saved);
-  } catch(e){ applyPalette('Ink'); }
 </script>
 
 </body>
